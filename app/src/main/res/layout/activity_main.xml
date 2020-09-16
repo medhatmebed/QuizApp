@@ -6,13 +6,164 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/QuizApptitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="QUIZ"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="6dp"
+            android:fontFamily="sans-serif-black"
+            android:textSize="26dp"
+            android:textStyle="bold"
+            />
+
+        <LinearLayout
+            android:id="@+id/questions_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/layoutbg"
+            android:layout_margin="8dp"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:id="@+id/firstQTxtView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="What’s the entry point of every Kotlin Program?"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="6dp"
+                android:textColor="#ffffff"
+                android:textSize="22dp"
+                android:fontFamily="serif-monospace"
+                />
+
+            <RadioGroup
+                android:id="@+id/radioBtnGroubQ1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="6dp">
+
+                <RadioButton
+                    android:id="@+id/Q1A1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="onCreate()"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    android:textColor="#2C2920"
+                    android:fontFamily="serif-monospace"/>
+
+                <RadioButton
+                    android:id="@+id/Q1A2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="onResume()"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    android:textColor="#2C2920"
+                    android:fontFamily="serif-monospace"/>
+
+                <RadioButton
+                    android:id="@+id/Q1A3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="onDestroy()"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    android:textColor="#2C2920"
+                    android:fontFamily="serif-monospace"/>
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/secondQTxtView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="is new keyword in Kotlin?"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="6dp"
+                android:textColor="#ffffff"
+                android:textSize="22dp"
+                android:textStyle="bold"
+                android:fontFamily="serif-monospace"/>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/radioBtnGroubQ2"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="16dp">
+
+                <RadioButton
+                    android:id="@+id/Q2A1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="True"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    android:textColor="#2C2920"
+                    android:fontFamily="serif-monospace"/>
+
+                <RadioButton
+                    android:id="@+id/Q2A2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="False"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    android:textColor="#2C2920"
+                    android:fontFamily="serif-monospace"/>
+
+                <RadioButton
+                    android:id="@+id/Q2A3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Don't know"
+                    android:textColor="#2C2920"
+                    android:fontFamily="serif-monospace"
+                    android:textSize="16dp"
+                    android:textStyle="bold"/>
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="bottom"
+            android:layout_marginBottom="8dp">
+
+            <Button
+                android:id="@+id/resetBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="RESET"
+                android:fontFamily="serif-monospace"
+                android:textStyle="bold"
+                android:textColor="#ffffff"
+                android:textSize="22dp"
+                android:backgroundTint="#FD7A51"/>
+
+            <Button
+                android:id="@+id/submitBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="SUBMIT"
+                android:fontFamily="serif-monospace"
+                android:textStyle="bold"
+                android:textSize="22dp"
+                android:backgroundTint="#85C837"/>
+        </LinearLayout>
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
